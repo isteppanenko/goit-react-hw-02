@@ -1,5 +1,13 @@
+import Descriptions from './description/Descriptions';
+import Options from './Options/Options';
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <Descriptions />
+      <Options />
+    </>
+  );
 }
 
 export default App;

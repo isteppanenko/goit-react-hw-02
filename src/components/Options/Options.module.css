@@ -1,0 +1,6 @@
+.buttonOptions {
+  margin-right: 5px;
+}
+.buttonOptions:last-child {
+  margin-right: 0;
+}

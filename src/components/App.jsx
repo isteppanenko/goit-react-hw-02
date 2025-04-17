@@ -17,12 +17,21 @@ function App() {
     });
   };
   const totalFeedback = clicks.good + clicks.neutral + clicks.bad;
-  console.log(totalFeedback);
+  const resetFeedback = () =>
+    setClicks({
+      good: 0,
+      neutral: 0,
+      bad: 0,
+    });
 
   return (
     <>
       <Descriptions />
-      <Options updateFeedback={updateFeedback} />
+      <Options
+        updateFeedback={updateFeedback}
+        totalFeedback={totalFeedback}
+        resetFeedback={resetFeedback}
+      />
       <Notification totalFeedback={totalFeedback} />
       <FeedBack
         good={clicks.good}

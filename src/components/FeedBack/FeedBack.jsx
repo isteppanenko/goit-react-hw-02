@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 const FeedBack = ({ good, neutral, bad }) => {
   return (
     <>

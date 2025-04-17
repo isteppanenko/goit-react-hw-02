@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import css from '../Options/Options.module.css';
 const Options = ({ updateFeedback }) => {
   return (

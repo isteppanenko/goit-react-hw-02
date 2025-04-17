@@ -1,6 +1,7 @@
 import Descriptions from './description/Descriptions';
 import FeedBack from './feedback/FeedBack';
 import Options from './Options/Options';
+import Notification from './Notification/Notification';
 import { useState } from 'react';
 
 function App() {
@@ -15,11 +16,14 @@ function App() {
       [feedbackType]: clicks[feedbackType] + 1,
     });
   };
+  const totalFeedback = clicks.good + clicks.neutral + clicks.bad;
+  console.log(totalFeedback);
 
   return (
     <>
       <Descriptions />
       <Options updateFeedback={updateFeedback} />
+      <Notification totalFeedback={totalFeedback} />
       <FeedBack good={clicks.good} neutral={clicks.neutral} bad={clicks.bad} />
     </>
   );

@@ -1,9 +1,13 @@
-const FeedBack = ({ good, neutral, bad }) => {
+const FeedBack = ({ good, neutral, bad, totalFeedback }) => {
   return (
     <>
-      <p>Good: {good}</p>
-      <p>Neutral: {neutral}</p>
-      <p>Bad: {bad}</p>
+      {totalFeedback > 0 ? (
+        <div>
+          <p>Good: {good}</p>
+          <p>Neutral: {neutral}</p>
+          <p>Bad: {bad}</p>
+        </div>
+      ) : null}
     </>
   );
 };

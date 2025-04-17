@@ -24,7 +24,12 @@ function App() {
       <Descriptions />
       <Options updateFeedback={updateFeedback} />
       <Notification totalFeedback={totalFeedback} />
-      <FeedBack good={clicks.good} neutral={clicks.neutral} bad={clicks.bad} />
+      <FeedBack
+        good={clicks.good}
+        neutral={clicks.neutral}
+        bad={clicks.bad}
+        totalFeedback={totalFeedback}
+      />
     </>
   );
 }

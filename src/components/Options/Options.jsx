@@ -1,20 +1,24 @@
 import { useState } from 'react';
 import css from '../Options/Options.module.css';
-const Options = ({ good, neutral, bad }) => {
-  // const onActions = () => alert('Hello world');
-  // const [clicks, setClicks] = useState(0);
-  // const handleClick = () => {
-  //   setClicks(clicks + 1);
-  // };
+const Options = ({ updateFeedback }) => {
   return (
     <>
-      <button className={css.buttonOptions} onClick={good}>
+      <button
+        className={css.buttonOptions}
+        onClick={() => updateFeedback('good')}
+      >
         Good
       </button>
-      <button className={css.buttonOptions} onClick={neutral}>
+      <button
+        className={css.buttonOptions}
+        onClick={() => updateFeedback('neutral')}
+      >
         Neutral
       </button>
-      <button className={css.buttonOptions} onClick={bad}>
+      <button
+        className={css.buttonOptions}
+        onClick={() => updateFeedback('bad')}
+      >
         Bad
       </button>
     </>

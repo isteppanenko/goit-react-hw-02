@@ -9,33 +9,19 @@ function App() {
     neutral: 0,
     bad: 0,
   });
+  const updateFeedback = (feedbackType) => {
+    setClicks({
+      ...clicks,
+      [feedbackType]: clicks[feedbackType] + 1,
+    });
+  };
 
   return (
     <>
       <Descriptions />
-      <Options
-        good={() => {
-          setClicks({
-            ...clicks,
-            good: clicks.good + 1,
-          });
-        }}
-        neutral={() => {
-          setClicks({
-            ...clicks,
-            neutral: clicks.neutral + 1,
-          });
-        }}
-        bad={() => {
-          setClicks({
-            ...clicks,
-            bad: clicks.bad + 1,
-          });
-        }}
-      />
+      <Options updateFeedback={updateFeedback} />
       <FeedBack good={clicks.good} neutral={clicks.neutral} bad={clicks.bad} />
     </>
   );
 }
-
 export default App;

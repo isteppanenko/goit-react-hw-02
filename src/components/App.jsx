@@ -1,4 +1,4 @@
-import Descriptions from './description/Descriptions';
+import Description from './Description/Description';
 import FeedBack from './feedback/FeedBack';
 import Options from './Options/Options';
 import Notification from './Notification/Notification';
@@ -37,7 +37,7 @@ function App() {
 
   return (
     <>
-      <Descriptions />
+      <Description />
       <Options
         updateFeedback={updateFeedback}
         totalFeedback={totalFeedback}

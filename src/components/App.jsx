@@ -1,7 +1,7 @@
-import Description from './Description/Description';
-import FeedBack from './feedback/FeedBack';
-import Options from './Options/Options';
-import Notification from './Notification/Notification';
+import Description from './Description/Description.jsx';
+import FeedBack from './feedback/FeedBack.jsx';
+import Options from './Options/Options.jsx';
+import Notification from './Notification/Notification.jsx';
 import { useEffect, useState } from 'react';
 
 function App() {

@@ -1,5 +1,5 @@
 import Description from './Description/Description.jsx';
-import FeedBack from './feedback/FeedBack.jsx';
+import FeedBack from './Feedback/FeedBack.jsx';
 import Options from './Options/Options.jsx';
 import Notification from './Notification/Notification.jsx';
 import { useEffect, useState } from 'react';

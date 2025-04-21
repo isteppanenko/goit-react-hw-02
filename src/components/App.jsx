@@ -2,14 +2,25 @@ import Descriptions from './description/Descriptions';
 import FeedBack from './feedback/FeedBack';
 import Options from './Options/Options';
 import Notification from './Notification/Notification';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
-  const [clicks, setClicks] = useState({
-    good: 0,
-    neutral: 0,
-    bad: 0,
+  // const [clicks, setClicks] = useState({
+  //   good: 0,
+  //   neutral: 0,
+  //   bad: 0,
+  // });
+  const [clicks, setClicks] = useState(() => {
+    const saveClicks = window.localStorage.getItem('save-clicks');
+    if (saveClicks !== null) {
+      return JSON.parse(saveClicks);
+    }
+    return { good: 0, neutral: 0, bad: 0 };
   });
+  useEffect(() => {
+    window.localStorage.setItem('save-clicks', JSON.stringify(clicks));
+  }, [clicks]);
+
   const updateFeedback = (feedbackType) => {
     setClicks({
       ...clicks,
